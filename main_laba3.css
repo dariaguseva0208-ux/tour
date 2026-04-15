@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Шапка */
+.header {
+    background: linear-gradient(to right, #0066cc, #003366);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.header a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header a:hover {
+    color: #ffcc00;
+}
+
+/* Бургер */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.burger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    display: block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Анімація бургера в хрестик */
+.burger.open span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+.burger.open span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Герой */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+    color: white;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: auto;
+}
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+.hero .subtitle {
+    font-size: 20px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Кнопка пошуку в меню */
+.search-link {
+    background: #ffcc00;
+    color: black !important;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+.search-link:hover {
+    background: #fff;
+    color: #000 !important;
+}
+
+/* Пошук туру */
+.search-section {
+    padding: 30px;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.search-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.search-form input,
+.search-form select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.search-form button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+.search-form button:hover {
+    background: #ffcc00;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Каталог */
+.catalog {
+    padding: 30px;
+    text-align: center;
+}
+
+/* Обгортка слайдера */
+.slider-wrapper {
+    position: relative;
+}
+
+/* Слайдер */
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 111px;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 400px;
+    scroll-snap-align: start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.product-card:hover {
+    transform: scale(1.03);
+}
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #444;
+}
+
+.product-card button {
+    padding: 8px 16px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.product-card button:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+/* Кнопки слайдера */
+.slide-btn {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+.slide-btn:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+/* Форма заявки */
+.form-section {
+    padding: 30px;
+    background-color: #f0f0f0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+form input,
+form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form button {
+    padding: 10px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form button:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+/* Футер */
+.footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 576px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #003366;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        padding: 10px 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero .subtitle {
+        font-size: 16px;
+    }
+
+    .search-form,
+    form {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+

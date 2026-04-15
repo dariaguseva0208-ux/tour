@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Loyal Touristik</title>
+    <link rel="stylesheet" href="main_laba3.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Loyal Touristik</h1>
+    <nav class="nav-links" id="navLinks">
+        <a href="#">Головна</a>
+        <a href="#destinations">Напрямки</a>
+        <a href="#form">Заявка</a>
+        <a href="#contacts">Контакти</a>
+        <a href="#search" class="search-link">Пошук туру</a>
+    </nav>
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Подорожуй з нами!</h2>
+        <p class="subtitle">Мережа туристичних агенцій <strong>Loyal Touristik</strong> пропонує Вам тури від кращих туроператорів України. Ми втілюємо Ваші мрії про бездоганну подорож!</p>
+    </div>
+</section>
+
+<section id="search" class="search-section">
+    <h2>Пошук туру</h2>
+    <form class="search-form">
+        <label>Країна / Курорт / Готель:</label>
+        <input type="text" name="place" placeholder="Наприклад: Єгипет, Хургада, Hilton">
+
+        <label>Звідки:</label>
+        <select name="from">
+            <option>Львів</option>
+            <option>Київ</option>
+            <option>Харків</option>
+            <option>Донбас</option>
+        </select>
+
+        <label>Дата:</label>
+        <input type="date" name="date_from"> —
+        <input type="date" name="date_to">
+
+        <label>На скільки ночей:</label>
+        <select name="nights">
+            <option>6</option>
+            <option>12</option>
+            <option>14</option>
+        </select>
+
+        <label>Кількість дорослих:</label>
+        <input type="number" name="adults" min="1" max="10" value="2">
+
+        <button type="submit">Знайти</button>
+    </form>
+</section>
+
+<section id="destinations" class="catalog">
+    <h2>Популярні напрямки</h2>
+    <div class="slider-wrapper">
+        <div class="products slider">
+            <div class="product-card">
+                <img src="https://b2ccdn.coraltravel.ua/content/countries/egypt/hurghada-resorts.jpg" alt="Єгипет">
+                <h3>Єгипет</h3>
+                <p class="price">від 600€</p>
+                <button>Детальніше</button>
+            </div>
+            <div class="product-card">
+                <img src="https://www.volynnews.com/files/news/2021/06-26/317783/cover_original.jpg" alt="Таїланд">
+                <h3>Таїланд</h3>
+                <p class="price">від 900€</p>
+                <button>Детальніше</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i0.wp.com/mytravelation.com/wp-content/uploads/2023/08/Paris.jpeg" alt="Франція">
+                <h3>Франція</h3>
+                <p class="price">від 750€</p>
+                <button>Детальніше</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tour-to-italy.com/images/articles/16.jpg" alt="Італія">
+                <h3>Італія</h3>
+                <p class="price">від 420€</p>
+                <button>Детальніше</button>
+            </div>
+            <div class="product-card">
+                <img src="https://static.tildacdn.com/tild6563-3135-4361-b437-356131356132/la_cityscape.jpg" alt="США">
+                <h3>США</h3>
+                <p class="price">від 1100€</p>
+                <button>Детальніше</button>
+            </div>
+            <div class="product-card">
+                <img src="https://poshuk.xo.ua/assets/703cfe7e-e7cf-4523-ae7c-821a1079534a?key=article-content" alt="Греція">
+                <h3>Греція</h3>
+                <p class="price">від 580€</p>
+                <button>Детальніше</button>
+            </div>
+            <div class="product-card">
+                <img src="https://s0.rbk.ru/v6_top_pics/media/img/8/99/347708246915998.jpeg" alt="Острів Епштейна">
+                <h3>Острів Епштейна</h3>
+                <p class="price">від 350€</p>
+                <button>Детальніше</button>
+            </div>
+            <div class="product-card">
+                <img src="https://alf.ua/public/uploads/media/thumbnails/0003/04/802f791490eb6765fa857307bf7487d557fa80a8.jpg" alt="Балі">
+                <h3>Балі</h3>
+                <p class="price">від 1050€</p>
+                <button>Детальніше</button>
+            </div>
+            <div class="product-card">
+                <img src="https://travel.24tv.ua/resources/photos/news/202106/1656275_15082448.jpg?202106152804&w=1200&h=675&fit=cover&output=webp" alt="Іспанія">
+                <h3>Іспанія</h3>
+                <p class="price">від 420€</p>
+                <button>Детальніше</button>
+            </div>
+            <div class="product-card">
+                <img src="https://www.lowcoster.in.ua/wp-content/uploads/2021/01/maldives.jpg" alt="Мальдіви">
+                <h3>Мальдіви</h3>
+                <p class="price">від 1400€</p>
+                <button>Детальніше</button>
+            </div>
+        </div>
+        <button class="slide-btn prev" id="prevBtn">&#9664;</button>
+        <button class="slide-btn next" id="nextBtn">&#9654;</button>
+    </div>
+</section>
+
+<section id="form" class="form-section">
+    <h2>Залиште заявку</h2>
+    <form>
+        <label>Ім'я:</label>
+        <input type="text" name="name" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Напрямок:</label>
+        <select name="destination">
+            <option>Єгипет</option>
+            <option>Таїланд</option>
+            <option>Франція</option>
+            <option>Італія</option>
+            <option>США</option>
+            <option>Греція</option>
+            <option>Острів Епштейна</option>
+            <option>Балі</option>
+            <option>Іспанія</option>
+            <option>Мальдіви</option>
+        </select>
+
+        <button type="submit">Відправити</button>
+    </form>
+</section>
+
+<footer id="contacts" class="footer">
+    <p>Контакти: sladkayakyrochka228@gmail.com | Тел: +380 95 881 7040</p>
+</footer>
+
+<script>
+    // Бургер
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        burger.classList.toggle('open');
+    });
+
+    // Закривати меню при кліку на посилання
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            burger.classList.remove('open');
+        });
+    });
+
+    // Слайдер
+    const slider = document.querySelector('.slider');
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        slider.scrollBy({ left: 280, behavior: 'smooth' });
+    });
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        slider.scrollBy({ left: -280, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
+
